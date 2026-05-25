@@ -1,1 +1,1 @@
-# Kreyton
+kendi hayatımı düzenlemek için kullanacağım mobil uygulamam çeşitli yenilikler detaylar ilerleyen updatelerde güncellenecektir commitlerle
