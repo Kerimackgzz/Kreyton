@@ -12,11 +12,11 @@ import {
 } from "react-native";
 
 const categories = [
-  { name: "Market", color: "#2F80ED" },
-  { name: "Yemek", color: "#C93A3A" },
-  { name: "Ulaşım", color: "#F4B63F" },
-  { name: "Spor", color: "#2E7D32" },
-  { name: "Diğer", color: "#6D28D9" },
+  { name: "Market", color: "#60a5fa" },
+  { name: "Yemek", color: "#fb7185" },
+  { name: "Ulaşım", color: "#fbbf24" },
+  { name: "Spor", color: "#34d399" },
+  { name: "Diğer", color: "#a78bfa" },
 ];
 
 export default function AddExpenseScreen() {
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
   successBox: {
     backgroundColor: "#123524",
     borderWidth: 1,
-    borderColor: "#2E7D32",
+    borderColor: "#34d399",
     padding: 14,
     borderRadius: 16,
     marginBottom: 16,
@@ -304,7 +304,7 @@ const styles = StyleSheet.create({
     fontWeight: "800",
   },
   saveButton: {
-    backgroundColor: "#2F80ED",
+    backgroundColor: "#60a5fa",
     padding: 15,
     borderRadius: 16,
     alignItems: "center",

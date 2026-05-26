@@ -19,11 +19,11 @@ type Expense = {
 };
 
 const categoryColors: Record<string, string> = {
-  Market: "#2F80ED",
-  Yemek: "#C93A3A",
-  Ulaşım: "#F4B63F",
-  Spor: "#2E7D32",
-  Diğer: "#6D28D9",
+  Market: "#60a5fa",
+  Yemek: "#fb7185",
+  Ulaşım: "#fbbf24",
+  Spor: "#34d399",
+  Diğer: "#a78bfa",
 };
 
 export default function BudgetScreen() {
@@ -152,35 +152,29 @@ export default function BudgetScreen() {
 
               <View style={styles.expenseRight}>
                 <Text style={styles.expensePrice}>
-                  {expense.price.toFixed(0)} TL
+                  {expense.price.toFixed(0)} ₺
                 </Text>
 
-                <View style={styles.expenseRight}>
-  <Text style={styles.expensePrice}>
-    {expense.price.toFixed(0)} TL
-  </Text>
+                <View style={styles.actionRow}>
+                  <TouchableOpacity
+                    style={styles.editButton}
+                    onPress={() =>
+                      router.push({
+                        pathname: "/edit-expense",
+                        params: { id: expense.id },
+                      })
+                    }
+                  >
+                    <Text style={styles.editButtonText}>Düzenle</Text>
+                  </TouchableOpacity>
 
-  <View style={styles.actionRow}>
-    <TouchableOpacity
-      style={styles.editButton}
-      onPress={() =>
-        router.push({
-          pathname: "/edit-expense",
-          params: { id: expense.id },
-        })
-      }
-    >
-      <Text style={styles.editButtonText}>Düzenle</Text>
-    </TouchableOpacity>
-
-    <TouchableOpacity
-      style={styles.deleteButton}
-      onPress={() => deleteExpense(expense.id)}
-    >
-      <Text style={styles.deleteButtonText}>Sil</Text>
-    </TouchableOpacity>
-  </View>
-</View>
+                  <TouchableOpacity
+                    style={styles.deleteButton}
+                    onPress={() => deleteExpense(expense.id)}
+                  >
+                    <Text style={styles.deleteButtonText}>Sil</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           ))
@@ -263,7 +257,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   button: {
-    backgroundColor: "#2F80ED",
+    backgroundColor: "#60a5fa",
     padding: 15,
     borderRadius: 16,
     alignItems: "center",
@@ -275,13 +269,13 @@ const styles = StyleSheet.create({
   },
   outlineButton: {
     borderWidth: 1,
-    borderColor: "#2F80ED",
+    borderColor: "#60a5fa",
     padding: 15,
     borderRadius: 16,
     alignItems: "center",
   },
   outlineButtonText: {
-    color: "#2F80ED",
+    color: "#60a5fa",
     fontSize: 15,
     fontWeight: "900",
   },
@@ -333,7 +327,7 @@ const styles = StyleSheet.create({
     fontWeight: "900",
   },
   deleteButton: {
-    backgroundColor: "#C93A3A",
+    backgroundColor: "#fb7185",
     paddingVertical: 6,
     paddingHorizontal: 12,
     borderRadius: 999,
@@ -349,7 +343,7 @@ const styles = StyleSheet.create({
 },
 
 editButton: {
-  backgroundColor: "#2F80ED",
+  backgroundColor: "#60a5fa",
   paddingVertical: 6,
   paddingHorizontal: 12,
   borderRadius: 999,

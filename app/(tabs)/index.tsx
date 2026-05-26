@@ -8,12 +8,12 @@ export default function HomeScreen() {
       <Text style={styles.title}>Kreyton</Text>
       <Text style={styles.subtitle}>Fitness, diyet ve günlük bütçe takip uygulaman</Text>
 
-      <View style={styles.block}>
-        <Text style={styles.blockTitle}>Fitness</Text>
-        <Text style={styles.blockText}>
+      <TouchableOpacity style={styles.activeBlock} onPress={() => router.push("/fitness")}>
+        <Text style={styles.activeBlockTitle}>Fitness</Text>
+        <Text style={styles.activeBlockText}>
           Antrenman programlarını, hareketlerini ve gelişimini takip et.
         </Text>
-      </View>
+      </TouchableOpacity>
 
       <View style={styles.block}>
         <Text style={styles.blockTitle}>Diyet</Text>
